@@ -1,0 +1,59 @@
+=== Upstream-style static task checks (local mirror: scripts/check_task_static.py) ===
+date: 2026-10-21
+
+PASS  task name namespace
+PASS  task description/authors/keywords non-empty
+PASS  metadata.author_name non-empty
+PASS  metadata.author_email non-empty
+PASS  metadata.author_organization non-empty
+PASS  metadata.author_profile non-empty
+PASS  metadata.domain non-empty
+PASS  metadata.field non-empty
+PASS  metadata.subfield non-empty
+PASS  metadata.relevant_experience non-empty
+PASS  taxonomy matches directory
+PASS  separate verifier mode
+PASS  verifier network_mode=no-network
+PASS  agent network_mode=public
+PASS  agent timeout is exactly 8h (28800 s)
+PASS  artifacts are absolute /root/results paths
+PASS  instruction timeout suffix matches task.toml
+PASS  instruction ends with required sentence
+PASS  instruction documents analysis.json
+PASS  artifact declared: analysis.json
+PASS  instruction documents clean_cycles.csv
+PASS  artifact declared: clean_cycles.csv
+PASS  instruction documents anomalies.csv
+PASS  artifact declared: anomalies.csv
+PASS  instruction documents model_comparison.csv
+PASS  artifact declared: model_comparison.csv
+PASS  instruction documents uncertainty.csv
+PASS  artifact declared: uncertainty.csv
+PASS  instruction documents predictions.csv
+PASS  artifact declared: predictions.csv
+PASS  instruction documents solve.py
+PASS  artifact declared: solve.py
+PASS  canary in task.toml
+PASS  canary in instruction.md
+PASS  canary in environment/Dockerfile
+PASS  canary in solution/solve.sh
+PASS  canary in solution/solve.py
+PASS  canary in tests/Dockerfile
+PASS  canary in tests/test.sh
+PASS  canary in tests/test_outputs.py
+PASS  canary in authoring/hint.md
+PASS  README section substantive: ## Difficulty
+PASS  README section substantive: ## Reference solution
+PASS  README section substantive: ## Verification
+PASS  binary reward written by test.sh
+PASS  no runtime installs in test.sh
+PASS  benchmark pytest pins baked into verifier image
+PASS  verifier image bakes tests + pre-creates artifact dirs
+PASS  no leak in environment/: eol_true
+PASS  no leak in environment/: Q0_true
+PASS  no leak in environment/: anomaly_keys
+PASS  no leak in environment/: heldout
+PASS  no truth files in environment/
+PASS  at least three graduated hints
+
+0 failure(s)

@@ -1,0 +1,116 @@
+{
+    "id": "722f59e8-78c7-4b82-8f96-b5be27d2ca0b",
+    "task_name": "terminal-bench-science/ev-battery-science-benchmark",
+    "trial_name": "ev-battery-science-benchmark__ipuonvZ",
+    "trial_uri": "file:///workspaces/codespaces-blank/jobs/2026-10-21__18-30-41/ev-battery-science-benchmark__ipuonvZ",
+    "task_id": {
+        "path": "tasks/engineering-sciences/electrical-engineering/ev-battery-science-benchmark"
+    },
+    "source": null,
+    "task_checksum": "a1cd99ccf31c740059b54325c5a1333ad5a4ba3f86da46da7d89d03f4af5da9d",
+    "config": {
+        "task": {
+            "path": "tasks/engineering-sciences/electrical-engineering/ev-battery-science-benchmark",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "ev-battery-science-benchmark__ipuonvZ",
+        "trials_dir": "jobs/2026-10-21__18-30-41",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "nop",
+            "import_path": null,
+            "model_name": null,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "6ab05128-8e7e-416f-823d-79e1f9c82213",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "nop",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-10-21T18:30:41.582634Z",
+    "finished_at": "2026-10-21T18:31:19.306280Z",
+    "environment_setup": {
+        "started_at": "2026-10-21T18:30:41.614947Z",
+        "finished_at": "2026-10-21T18:30:45.073713Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-21T18:30:45.073773Z",
+        "finished_at": "2026-10-21T18:30:45.073841Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-21T18:30:45.073934Z",
+        "finished_at": "2026-10-21T18:30:45.075963Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-21T18:30:58.749499Z",
+        "finished_at": "2026-10-21T18:31:19.306263Z"
+    },
+    "step_results": null
+}

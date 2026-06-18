@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.0",
+  "units": {
+    "capacity": "Ah",
+    "cycle_index": "cycles (count)",
+    "soh": "dimensionless (Q/Q0)",
+    "temperature": "degC",
+    "crate": "C (1/h)"
+  },
+  "definitions": {
+    "reference_capacity": "median of first 3 valid discharge capacities per cell",
+    "soh": "discharge_capacity_Ah / reference_capacity_Ah",
+    "eol": "first cycle where selected model SOH crosses 0.8"
+  },
+  "config": {
+    "eol_soh": 0.8,
+    "n_reference": 3,
+    "robust_loss": true,
+    "anomaly_mad_threshold": 4.0,
+    "min_cycles_per_cell": 8,
+    "holdout_fraction": 0.3,
+    "n_bootstrap": 200,
+    "bootstrap_seed": 12345,
+    "confidence_level": 0.95,
+    "eol_max_cycles": 20000.0,
+    "max_capacity_Ah": 500.0,
+    "temperature_range_C": [
+      -40.0,
+      80.0
+    ],
+    "max_crate": 20.0,
+    "max_capacity_multiple": 1.25
+  },
+  "input_sha256": "fe128baeda0b9c55f136097743fcfafc0f120fbed4453a1796c0fd80b39d92dc",
+  "metadata": {
+    "experiment": "LFP 18650 cycle-ageing campaign (6 cells, 3 discharge rates x 2 charge rates) extracted from Zenodo 10.5281/zenodo.22286450 by Japar, Al-Sagheer & Steinberger-Wilckens (CC-BY-4.0)",
+    "nominal_capacity_Ah": 1.25,
+    "eol_soh": 0.8,
+    "forecast_cycles": [],
+    "config": {
+      "n_bootstrap": 200
+    }
+  },
+  "limitations": [
+    "Empirical SOH(k) fits do not identify electrochemical degradation mechanisms.",
+    "Residual bootstrap assumes approximately independent residuals; serial correlation within a cell makes intervals optimistic.",
+    "Extrapolation beyond the observed cycle range is model-dependent; treat forecasts past the data range as provisional.",
+    "Cell-level laboratory results do not directly predict EV pack-level life (imbalance, thermal gradients, BMS limits are not modelled)."
+  ],
+  "cells": {
+    "B1_Dis0.5C_Chg0.5C": {
+      "n_clean": 1301,
+      "reference_capacity_Ah": 1.2202379739902776,
+      "temperature_C_median": 25.0,
+      "warnings": [
+        "EOL (4520) lies beyond observed range (max 1500 cycles); extrapolated value."
+      ],
+      "n_second_pass_flagged": 130,
+      "n_restored": 29,
+      "residual_drift_per_1000_cycles": 0.000295353999976763,
+      "eol_ci": [
+        4490.385363423109,
+        4555.659669677147
+      ],
+      "eol_ci_level": 0.95,
+      "status": "ok",
+      "selected_model": "power",
+      "params": {
+        "a": 0.0010446631138752774,
+        "b": 0.624343143620089
+      },
+      "parameter_uncertainty": {
+        "a": {
+          "se": 1.187320652508559e-05,
+          "ci_lo": 0.0010213920567051036,
+          "ci_hi": 0.0010679341710454512
+        },
+        "b": {
+          "se": 0.0016444786391798295,
+          "ci_lo": 0.6211200247139511,
+          "ci_hi": 0.6275662625262269
+        }
+      },
+      "rmse": 0.00160750804712104,
+      "mae": 0.0011177371018293147,
+      "aicc": -16734.839144487294,
+      "bic": -16724.506612522564,
+      "holdout_rmse": 0.0019362183021045427,
+      "eol_cycle": 4519.885221155369,
+      "eol_soh_threshold": 0.8,
+      "max_observed_cycle": 1500.0,
+      "n_anomalies": 159,
+      "bootstrap_successful": 200
+    },
+    "B2_Dis1C_Chg0.5C": {
+      "n_clean": 1475,
+      "reference_capacity_Ah": 1.2080074152472222,
+      "temperature_C_median": 25.0,
+      "warnings": [
+        "EOL (3501) lies beyond observed range (max 1600 cycles); extrapolated value."
+      ],
+      "n_second_pass_flagged": 21,
+      "n_restored": 44,
+      "residual_drift_per_1000_cycles": 0.0009516139348343387,
+      "eol_ci": [
+        3464.948015605324,
+        3538.6273514153104
+      ],
+      "eol_ci_level": 0.95,
+      "status": "ok",
+      "selected_model": "knee",
+      "params": {
+        "a1": 0.00014698809061841408,
+        "a2": 4.688220905082958e-05,
+        "knee": 358.3733798174981
+      },
+      "parameter_uncertainty": {
+        "a1": {
+          "se": 1.1142630663727967e-06,
+          "ci_lo": 0.00014480417513902023,
+          "ci_hi": 0.00014917200609780793
+        },
+        "a2": {
+          "se": 3.611761420690163e-07,
+          "ci_lo": 4.6174316820299185e-05,
+          "ci_hi": 4.759010128135998e-05
+        },
+        "knee": {
+          "se": 4.732279268022044,
+          "ci_lo": 349.09828288738936,
+          "ci_hi": 367.6484767476069
+        }
+      },
+      "rmse": 0.0044341393838173045,
+      "mae": 0.0034570768014882346,
+      "aicc": -15978.327797067017,
+      "bic": -15962.454872692375,
+      "holdout_rmse": 0.022248321512048027,
+      "eol_cycle": 3500.788896382226,
+      "eol_soh_threshold": 0.8,
+      "max_observed_cycle": 1600.0,
+      "n_anomalies": 30,
+      "bootstrap_successful": 200
+    },
+    "B3_Dis2C_Chg0.5C": {
+      "n_clean": 1823,
+      "reference_capacity_Ah": 1.161695242926389,
+      "temperature_C_median": 25.0,
+      "warnings": [
+        "EOL (2704) lies beyond observed range (max 2000 cycles); extrapolated value."
+      ],
+      "n_second_pass_flagged": 0,
+      "n_restored": 336,
+      "residual_drift_per_1000_cycles": -0.0007396705954950486,
+      "eol_ci": [
+        2688.017089019433,
+        2722.6880284992303
+      ],
+      "eol_ci_level": 0.95,
+      "status": "ok",
+      "selected_model": "knee",
+      "params": {
+        "a1": 9.781409344644607e-05,
+        "a2": 6.955031688750041e-05,
+        "knee": 421.197102879104
+      },
+      "parameter_uncertainty": {
+        "a1": {
+          "se": 1.0589666282306475e-06,
+          "ci_lo": 9.573855699428418e-05,
+          "ci_hi": 9.988962989860796e-05
+        },
+        "a2": {
+          "se": 3.4181511215782085e-07,
+          "ci_lo": 6.888037157829956e-05,
+          "ci_hi": 7.022026219670126e-05
+        },
+        "knee": {
+          "se": 18.528850707327564,
+          "ci_lo": 384.8812228178225,
+          "ci_hi": 457.51298294038554
+        }
+      },
+      "rmse": 0.005882631313343257,
+      "mae": 0.0037411735561738925,
+      "aicc": -18718.935370868632,
+      "bic": -18702.423848607268,
+      "holdout_rmse": 0.011021428454453487,
+      "eol_cycle": 2704.450355002684,
+      "eol_soh_threshold": 0.8,
+      "max_observed_cycle": 2000.0,
+      "n_anomalies": 155,
+      "bootstrap_successful": 200
+    },
+    "B4_Dis3C_Chg0.5C": {
+      "n_clean": 1571,
+      "reference_capacity_Ah": 1.1858921865874998,
+      "temperature_C_median": 25.0,
+      "warnings": [],
+      "n_second_pass_flagged": 0,
+      "n_restored": 405,
+      "residual_drift_per_1000_cycles": -0.0016135564711796631,
+      "eol_ci": [
+        1327.0117211239224,
+        1339.025068999465
+      ],
+      "eol_ci_level": 0.95,
+      "status": "ok",
+      "selected_model": "power",
+      "params": {
+        "a": 0.001329027276226206,
+        "b": 0.6968364849009799
+      },
+      "parameter_uncertainty": {
+        "a": {
+          "se": 3.159160765837402e-05,
+          "ci_lo": 0.001267108863002073,
+          "ci_hi": 0.0013909456894503388
+        },
+        "b": {
+          "se": 0.00342350437312925,
+          "ci_lo": 0.6901265396287313,
+          "ci_hi": 0.7035464301732286
+        }
+      },
+      "rmse": 0.007321591076284375,
+      "mae": 0.006352080495556698,
+      "aicc": -15444.978911635164,
+      "bic": -15434.267629419877,
+      "holdout_rmse": 0.014753304886730559,
+      "eol_cycle": 1333.0019564664985,
+      "eol_soh_threshold": 0.8,
+      "max_observed_cycle": 1600.0,
+      "n_anomalies": 6,
+      "bootstrap_successful": 200
+    },
+    "B5_Dis0.5C_Chg1C": {
+      "n_clean": 1480,
+      "reference_capacity_Ah": 1.1950934817041667,
+      "temperature_C_median": 25.0,
+      "warnings": [
+        "EOL (3138) lies beyond observed range (max 1500 cycles); extrapolated value."
+      ],
+      "n_second_pass_flagged": 3,
+      "n_restored": 6,
+      "residual_drift_per_1000_cycles": -0.00019172017461663456,
+      "eol_ci": [
+        3122.948463975663,
+        3154.834100337848
+      ],
+      "eol_ci_level": 0.95,
+      "status": "ok",
+      "selected_model": "knee",
+      "params": {
+        "a1": 0.0003363614549520909,
+        "a2": 5.787559046269833e-05,
+        "knee": 66.00064440757878
+      },
+      "parameter_uncertainty": {
+        "a1": {
+          "se": 1.0392540465453883e-05,
+          "ci_lo": 0.00031599244993192615,
+          "ci_hi": 0.00035673045997225563
+        },
+        "a2": {
+          "se": 2.0645264798131921e-07,
+          "ci_lo": 5.747095070814202e-05,
+          "ci_hi": 5.828023021725464e-05
+        },
+        "knee": {
+          "se": 2.5387791103995383,
+          "ci_lo": 61.02472878649304,
+          "ci_hi": 70.97656002866451
+        }
+      },
+      "rmse": 0.0031242589615609667,
+      "mae": 0.0025068837749105187,
+      "aicc": -17068.91588223253,
+      "bic": -17053.03275029486,
+      "holdout_rmse": 0.0038989320554022886,
+      "eol_cycle": 3138.1062730125386,
+      "eol_soh_threshold": 0.8,
+      "max_observed_cycle": 1500.0,
+      "n_anomalies": 11,
+      "bootstrap_successful": 200
+    },
+    "B6_Dis0.5C_Chg2C": {
+      "n_clean": 1560,
+      "reference_capacity_Ah": 1.2454254763375,
+      "temperature_C_median": 25.0,
+      "warnings": [
+        "EOL (2261) lies beyond observed range (max 1699 cycles); extrapolated value."
+      ],
+      "n_second_pass_flagged": 57,
+      "n_restored": 221,
+      "residual_drift_per_1000_cycles": -0.0003312406591032004,
+      "eol_ci": [
+        2252.804823528509,
+        2269.769073969276
+      ],
+      "eol_ci_level": 0.95,
+      "status": "ok",
+      "selected_model": "power",
+      "params": {
+        "a": 0.0031241587168743604,
+        "b": 0.5385039067348075
+      },
+      "parameter_uncertainty": {
+        "a": {
+          "se": 2.8906672733710346e-05,
+          "ci_lo": 0.003067502679403402,
+          "ci_hi": 0.0031808147543453185
+        },
+        "b": {
+          "se": 0.0013265829989623679,
+          "ci_lo": 0.5359038518343382,
+          "ci_hi": 0.5411039616352769
+        }
+      },
+      "rmse": 0.0027816754155483366,
+      "mae": 0.002091910444164031,
+      "aicc": -18356.26211275437,
+      "bic": -18345.56493768298,
+      "holdout_rmse": 0.003778093334470258,
+      "eol_cycle": 2260.9318355064706,
+      "eol_soh_threshold": 0.8,
+      "max_observed_cycle": 1699.0,
+      "n_anomalies": 126,
+      "bootstrap_successful": 200
+    }
+  },
+  "data_quality": {
+    "n_rows": 9697,
+    "n_cells": 6,
+    "missing_required": [],
+    "n_missing_capacity": 0,
+    "n_nonpositive_capacity": 14,
+    "n_duplicate_cycle_rows": 0,
+    "n_nonmonotonic_cells": 0,
+    "unit_conversions": [],
+    "warnings": []
+  }
+}

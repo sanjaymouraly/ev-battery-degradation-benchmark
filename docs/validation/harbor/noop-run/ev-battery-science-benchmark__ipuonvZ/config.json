@@ -1,0 +1,11 @@
+{
+    "task": {
+        "path": "tasks/engineering-sciences/electrical-engineering/ev-battery-science-benchmark"
+    },
+    "trial_name": "ev-battery-science-benchmark__ipuonvZ",
+    "trials_dir": "jobs/2026-10-21__18-30-41",
+    "agent": {
+        "name": "nop"
+    },
+    "job_id": "6ab05128-8e7e-416f-823d-79e1f9c82213"
+}

@@ -1,0 +1,146 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 14,
+            "passed": 14,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1792607396.7734468,
+            "stop": 1792607421.7307322
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_required_files_exist",
+                "status": "passed",
+                "duration": 0.0009290509988204576,
+                "start": 1792607398.1933997,
+                "stop": 1792607398.1961157,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_schemas_and_cells",
+                "status": "passed",
+                "duration": 0.0738152509993597,
+                "start": 1792607398.1964343,
+                "stop": 1792607398.2705727,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_no_silent_row_loss_and_soh_consistency",
+                "status": "passed",
+                "duration": 0.016545517999475123,
+                "start": 1792607398.2722523,
+                "stop": 1792607398.289147,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_reference_capacity_recovery",
+                "status": "passed",
+                "duration": 0.0021609159994113725,
+                "start": 1792607398.289502,
+                "stop": 1792607398.2919557,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_forecast_accuracy_against_truth",
+                "status": "passed",
+                "duration": 0.015994981001313135,
+                "start": 1792607398.2924743,
+                "stop": 1792607398.3087928,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_eol_recovery",
+                "status": "passed",
+                "duration": 0.0006391599999915343,
+                "start": 1792607398.3091307,
+                "stop": 1792607398.3099976,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_anomaly_recovery",
+                "status": "passed",
+                "duration": 0.002062573998955486,
+                "start": 1792607398.3102655,
+                "stop": 1792607398.3125486,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_uncertainty_intervals_valid_and_calibrated",
+                "status": "passed",
+                "duration": 0.00922051900124643,
+                "start": 1792607398.312844,
+                "stop": 1792607398.3223279,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_model_comparison_complete",
+                "status": "passed",
+                "duration": 0.013075242000923026,
+                "start": 1792607398.3226576,
+                "stop": 1792607398.336064,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_solver_reproducible",
+                "status": "passed",
+                "duration": 10.229388862000633,
+                "start": 1792607398.3363576,
+                "stop": 1792607408.5663881,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_solver_generalizes_to_heldout",
+                "status": "passed",
+                "duration": 7.233615019999888,
+                "start": 1792607408.567787,
+                "stop": 1792607415.8019185,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_solver_handles_mah_units",
+                "status": "passed",
+                "duration": 5.88539170400054,
+                "start": 1792607415.802258,
+                "stop": 1792607421.6882296,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_solver_does_not_read_private_fixtures",
+                "status": "passed",
+                "duration": 0.0006471859996963758,
+                "start": 1792607421.6885917,
+                "stop": 1792607421.6894174,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_private_fixtures_unreadable_by_solver_user",
+                "status": "passed",
+                "duration": 0.03982987199924537,
+                "start": 1792607421.6896648,
+                "stop": 1792607421.7300725,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

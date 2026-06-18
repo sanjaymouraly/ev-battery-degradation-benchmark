@@ -1,0 +1,22 @@
+=== Docker gate (scripts/validate_task_docker.sh both) ===
+date: 2026-10-21
+verifier container runs with --network none
+
+[oracle] reward=1  (log: validation_runs/docker-oracle/verifier.log)
+============================= 14 passed in 17.17s ==============================
+[nop] reward=0  (log: validation_runs/docker-nop/verifier.log)
+==================== 5 failed, 1 passed, 8 errors in 1.11s =====================
+
+--- oracle verifier tail ---
+PASSED tests/test_outputs.py::test_solver_does_not_read_private_fixtures
+PASSED tests/test_outputs.py::test_private_fixtures_unreadable_by_solver_user
+============================= 14 passed in 17.17s ==============================
+1
+--- oracle reward.txt ---
+1
+--- nop verifier tail ---
+FAILED tests/test_outputs.py::test_solver_does_not_read_private_fixtures - Fi...
+==================== 5 failed, 1 passed, 8 errors in 1.11s =====================
+0
+--- nop reward.txt ---
+0

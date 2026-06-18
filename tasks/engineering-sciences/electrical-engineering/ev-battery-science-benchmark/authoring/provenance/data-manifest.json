@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "generator": "evbatt.synthetic.generate_dataset",
+  "main_seed": 1000,
+  "heldout_seed": 5000,
+  "files": {
+    "environment/data/cycling_data.csv": "545dbdda45365582114b508ea799973b0ca712bb0513b3a56f20cdbd45867101",
+    "environment/data/metadata.json": "d896014b0b89e1805ba8afac34783801178f97133333d61ccc33b35f5af42efb"
+  }
+}

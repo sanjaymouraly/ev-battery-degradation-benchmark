@@ -1,0 +1,3 @@
+# Dependencies for the optional Streamlit explorer (app/streamlit_app.py).
+# Install with:  pip install -e ".[app]"  (or: pip install -r app/requirements.txt)
+streamlit>=1.36,<2

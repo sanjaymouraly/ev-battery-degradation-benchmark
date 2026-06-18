@@ -1,0 +1,9 @@
+{
+  "experiment": "LFP 18650 cycle-ageing campaign (6 cells, 3 discharge rates x 2 charge rates) extracted from Zenodo 10.5281/zenodo.22286450 by Japar, Al-Sagheer & Steinberger-Wilckens (CC-BY-4.0)",
+  "nominal_capacity_Ah": 1.25,
+  "eol_soh": 0.8,
+  "forecast_cycles": [],
+  "config": {
+    "n_bootstrap": 200
+  }
+}

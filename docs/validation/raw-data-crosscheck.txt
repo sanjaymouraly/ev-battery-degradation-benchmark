@@ -1,0 +1,15 @@
+=== Raw-data cross-check (raw Zenodo archive vs shipped derived table) ===
+date: 2026-10-21
+command: python scripts/validate_raw_data.py --zip LFP_18650_Battery_Ageing_Raw_Data.zip
+
+archive : /tmp/opencode/zenodo/LFP_18650_Battery_Ageing_Raw_Data.zip
+size    : 2262650872 bytes (expected 2262650872)
+md5     : fd778d5c1c8e35f9f348830faf374158 (expected fd778d5c1c8e35f9f348830faf374158)
+derived : 9697 rows, 6 cells
+
+OK   B1_Dis0.5C_Chg0.5C cycle 50: raw=1.202306643 Ah derived=1.202306643 Ah |diff|=2.220e-16 Ah (sheets=50, points=14216)
+OK   B4_Dis3C_Chg0.5C cycle 1600: raw=0.926177518 Ah derived=0.926177518 Ah |diff|=0.000e+00 Ah (sheets=100, points=7431)
+OK   B6_Dis0.5C_Chg2C cycle 50: raw=1.218655333 Ah derived=1.218655333 Ah |diff|=2.220e-16 Ah (sheets=51, points=9432)
+
+worst |difference| = 2.220e-16 Ah  (tolerance 1.0e-09 Ah)
+RESULT: raw archive and derived table agree (within tolerance)

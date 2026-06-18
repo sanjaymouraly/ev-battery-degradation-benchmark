@@ -1,0 +1,21 @@
+=== Package test suite ===
+date: 2026-10-21
+python: Python 3.12.3
+
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.7.0
+rootdir: /workspaces/codespaces-blank
+configfile: pyproject.toml
+plugins: hypothesis-6.170.5, anyio-4.15.1
+collected 33 items
+
+tests/test_ai.py ........                                                [ 24%]
+tests/test_cli_and_io.py .........                                       [ 51%]
+tests/test_mstat.py ..                                                   [ 57%]
+tests/test_science.py ..............                                     [100%]
+
+============================= 33 passed in 12.31s ==============================
+
+=== ruff ===
+All checks passed!
+ruff exit=0

@@ -1,0 +1,13 @@
+=== Local separate-verifier simulation ===
+date: 2026-10-21
+command: python scripts/validate_task_local.py all
+
+===== oracle =====
+oracle: reward=1
+===== noop =====
+noop: reward=0
+===== forged =====
+forged: reward=0
+===== alternative =====
+alternative: reward=1
+Summary: {'oracle': 1, 'noop': 0, 'forged': 0, 'alternative': 1}

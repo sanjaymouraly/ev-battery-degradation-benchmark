@@ -1,0 +1,26 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-8.4.1, pluggy-1.7.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 14 items
+
+tests/test_outputs.py ..............                                     [100%]
+
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_outputs.py::test_required_files_exist
+PASSED tests/test_outputs.py::test_schemas_and_cells
+PASSED tests/test_outputs.py::test_no_silent_row_loss_and_soh_consistency
+PASSED tests/test_outputs.py::test_reference_capacity_recovery
+PASSED tests/test_outputs.py::test_forecast_accuracy_against_truth
+PASSED tests/test_outputs.py::test_eol_recovery
+PASSED tests/test_outputs.py::test_anomaly_recovery
+PASSED tests/test_outputs.py::test_uncertainty_intervals_valid_and_calibrated
+PASSED tests/test_outputs.py::test_model_comparison_complete
+PASSED tests/test_outputs.py::test_solver_reproducible
+PASSED tests/test_outputs.py::test_solver_generalizes_to_heldout
+PASSED tests/test_outputs.py::test_solver_handles_mah_units
+PASSED tests/test_outputs.py::test_solver_does_not_read_private_fixtures
+PASSED tests/test_outputs.py::test_private_fixtures_unreadable_by_solver_user
+============================= 14 passed in 24.96s ==============================
+1

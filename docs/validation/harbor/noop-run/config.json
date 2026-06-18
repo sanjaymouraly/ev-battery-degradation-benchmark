@@ -1,0 +1,12 @@
+{
+    "agents": [
+        {
+            "name": "nop"
+        }
+    ],
+    "tasks": [
+        {
+            "path": "tasks/engineering-sciences/electrical-engineering/ev-battery-science-benchmark"
+        }
+    ]
+}

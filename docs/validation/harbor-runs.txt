@@ -1,0 +1,27 @@
+=== Harbor 0.24.0 real runs ===
+date: 2026-10-21
+harbor: 0.24.0
+
+--- docs/validation/harbor/oracle-run ---
+job id      : c5bf202a-1d21-4df1-b0c4-7188321af657
+started     : 2026-10-21T18:29:10.591036
+finished    : 2026-10-21T18:30:32.788008
+trials      : 1 completed 1 errored 0
+eval        : oracle__adhoc -> mean reward 1.0 (errors 0)
+reward.txt  : 1
+ctrf summary: {"tests": 14, "passed": 14, "failed": 0, "skipped": 0, "pending": 0, "other": 0, "start": 1792607396.7734468, "stop": 1792607421.7307322}
+artifacts   : analysis.json anomalies.csv clean_cycles.csv model_comparison.csv predictions.csv solve.py uncertainty.csv 
+
+--- docs/validation/harbor/noop-run ---
+job id      : 6ab05128-8e7e-416f-823d-79e1f9c82213
+started     : 2026-10-21T18:30:41.494044
+finished    : 2026-10-21T18:31:19.309700
+trials      : 1 completed 1 errored 0
+eval        : nop__adhoc -> mean reward 0.0 (errors 0)
+reward.txt  : 0
+ctrf summary: {"tests": 14, "passed": 1, "failed": 13, "skipped": 0, "pending": 0, "other": 0, "start": 1792607466.4809024, "stop": 1792607468.1968772}
+artifacts   : 
+
+--- upstream check-verifier-output.py ---
+OK 1 trial(s): binary reward, well-formed ctrf.json
+OK 1 trial(s): binary reward, well-formed ctrf.json

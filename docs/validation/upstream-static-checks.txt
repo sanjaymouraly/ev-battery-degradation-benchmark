@@ -1,0 +1,36 @@
+=== Upstream Terminal-Bench-Science static checks (real upstream scripts) ===
+date: 2026-10-21
+upstream repo: harbor-framework/terminal-bench-science @ 55a8913
+task placed at: tasks/engineering-sciences/electrical-engineering/ev-battery-science-benchmark
+
+PASS (clean) check-canary.sh
+PASS (clean) check-dockerfile-references.sh
+PASS (clean) check-dockerfile-sanity.sh
+PASS (clean) check-dockerfile-platform.sh
+PASS (clean) check-task-absolute-path.sh
+PASS (clean) check-test-file-references.sh
+PASS (clean) check-test-sh-sanity.sh
+PASS (clean) check-task-fields.sh
+PASS (clean) check-task-structure.sh
+PASS (clean) check-task-timeout.sh
+PASS (clean) check-instruction-suffix.sh
+PASS (clean) check-gpu-types.sh
+PASS (clean) check-allow-internet.sh
+FAIL check-task-slug.sh
+FAIL tasks/engineering-sciences/electrical-engineering/ev-battery-science-benchmark: slug has 4 hyphen-separated tokens (max 3)
+PASS (clean) check-separate-verifier.sh
+PASS (clean) check-verifier-tooling-baked.sh
+PASS (clean) check-trial-network-fetch.sh
+PASS (clean) check-pip-pinning.sh
+PASS (clean) check-pytest-version.sh
+PASS (clean) check-nproc.sh
+PASS (clean) check-compose-host-binds.sh
+PASS (clean) check-binary-reward.sh
+PASS (clean) check-task-readme.sh
+
+--- similarity (sklearn 1.9.1) ---
+Max similarity: 22% with 'local/mathematical-sciences/operations-research/linked-cell-suppression' (threshold: 80%)
+Similarity check passed
+
+--- rubric consistency (repo-level) ---
+PASS task-implementation.toml is consistent with task-template.toml (allowed fields cover every template key; stated defaults match)

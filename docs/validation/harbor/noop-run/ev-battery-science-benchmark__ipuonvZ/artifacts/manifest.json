@@ -1,0 +1,66 @@
+[
+  {
+    "source": "/logs/artifacts",
+    "destination": "artifacts/logs/artifacts",
+    "type": "directory",
+    "status": "empty",
+    "service": null,
+    "exclude": []
+  },
+  {
+    "source": "/root/results/analysis.json",
+    "destination": "artifacts/root/results/analysis.json",
+    "type": "file",
+    "status": "failed",
+    "service": null,
+    "exclude": []
+  },
+  {
+    "source": "/root/results/clean_cycles.csv",
+    "destination": "artifacts/root/results/clean_cycles.csv",
+    "type": "file",
+    "status": "failed",
+    "service": null,
+    "exclude": []
+  },
+  {
+    "source": "/root/results/anomalies.csv",
+    "destination": "artifacts/root/results/anomalies.csv",
+    "type": "file",
+    "status": "failed",
+    "service": null,
+    "exclude": []
+  },
+  {
+    "source": "/root/results/model_comparison.csv",
+    "destination": "artifacts/root/results/model_comparison.csv",
+    "type": "file",
+    "status": "failed",
+    "service": null,
+    "exclude": []
+  },
+  {
+    "source": "/root/results/uncertainty.csv",
+    "destination": "artifacts/root/results/uncertainty.csv",
+    "type": "file",
+    "status": "failed",
+    "service": null,
+    "exclude": []
+  },
+  {
+    "source": "/root/results/predictions.csv",
+    "destination": "artifacts/root/results/predictions.csv",
+    "type": "file",
+    "status": "failed",
+    "service": null,
+    "exclude": []
+  },
+  {
+    "source": "/root/results/solve.py",
+    "destination": "artifacts/root/results/solve.py",
+    "type": "file",
+    "status": "failed",
+    "service": null,
+    "exclude": []
+  }
+]

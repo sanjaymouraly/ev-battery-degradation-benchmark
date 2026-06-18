@@ -1,0 +1,7 @@
+{
+  "experiment": "Bundled synthetic example (seed 7)",
+  "nominal_capacity_Ah": 1.25,
+  "eol_soh": 0.8,
+  "forecast_cycles": [850, 950, 1050],
+  "config": {"n_bootstrap": 200}
+}
